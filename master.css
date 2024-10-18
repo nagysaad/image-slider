@@ -1,0 +1,124 @@
+
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .slider-container {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px; 
+    height: auto;
+  }
+  .slider-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+    transition: display 1s;
+    cursor: pointer;
+  }
+  .slider-container img.active {
+    display: block;
+  }
+  .slider-container .slide-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  .slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto 0;
+    padding: 10px;
+  }
+  .slider-controls .prev,
+  .slider-controls .next {
+    background-color: #009688;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .slider-controls .prev.disabled,
+  .slider-controls .next.disabled {
+    background-color: rgba(0, 150, 136, 0.5);
+    cursor: not-allowed;
+  }
+  .slider-controls .indicators {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-grow: 1;
+  }
+  .slider-controls .indicators li {
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background-color: #f6f6f6;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    margin-right: 7px ;
+  }
+
+  
+  .slider-controls .indicators li.active {
+    background-color: #009688;
+    color: white;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .slider-container {
+      max-width: 100%;
+    }
+    .slider-controls .prev,
+    .slider-controls .next {
+      font-size: 14px;
+      padding: 8px;
+    }
+    .slider-controls .indicators li {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slider-controls .prev,
+    .slider-controls .next {
+      font-size: 12px;
+      padding: 6px;
+    }
+    .slider-controls .indicators li {
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
